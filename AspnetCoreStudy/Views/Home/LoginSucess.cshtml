@@ -1,0 +1,108 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="timetable">
+    <table>
+        <thead>
+            <tr>
+                <th class="timetable-th"></th>
+                <th class="timetable-th">월</th>
+                <th class="timetable-th">화</th>
+                <th class="timetable-th">수</th>
+                <th class="timetable-th">목</th>
+                <th class="timetable-th">금</th>
+                <th class="timetable-th">토</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="timetable-td">0</td>
+                <td class="timetable-td"></td>
+                <td class="timetable-td"></td>
+                <td class="timetable-td"></td>
+                <td class="timetable-td"></td>
+                <td class="timetable-td"></td>
+                <td class="timetable-td"></td>
+            </tr>
+            <tr>
+                <td class="timetable-td">1</td>
+                <td class="timetable-td"></td>
+                <td class="timetable-td valid" id="db">
+                    <a asp-controller="Note" asp-action="Index">
+                        데이터베이스(미지정/문승현)
+                    </a>
+                <td class="timetable-td"></td>
+                <td class="timetable-td"></td>
+                <td class="timetable-td"></td>
+                <td class="timetable-td"></td>
+            </tr>
+            <tr>
+                <td class="timetable-td">2</td>
+                <td class="timetable-td"></td>
+                <td class="timetable-td"></td>
+                <td class="timetable-td"></td>
+                <td class="timetable-td"></td>
+                <td class="timetable-td"></td>
+                <td class="timetable-td"></td>
+            </tr>
+            <tr>
+                <td class="timetable-td">3</td>
+                <td class="timetable-td"></td>
+                <td class="timetable-td"></td>
+                <td class="timetable-td"></td>
+                <td class="timetable-td valid" id="db">
+                    <a asp-controller="Note" asp-action="Index">
+                        데이터베이스(새빛204/문승현)
+                    </a>
+                </td>
+                <td class="timetable-td"></td>
+                <td class="timetable-td"></td>
+            </tr>
+            <tr>
+                <td class="timetable-td">4</td>
+                <td class="timetable-td"></td>
+                <td class="timetable-td"></td>
+                <td class="timetable-td"></td>
+                <td class="timetable-td"></td>
+                <td class="timetable-td"></td>
+                <td class="timetable-td"></td>
+            </tr>
+            <tr>
+                <td class="timetable-td">5</td>
+                <td class="timetable-td valid" id="dc">
+                    <a asp-controller="Note" asp-action="Index">
+                        데이터통신(미지정/최웅철)
+                    </a>
+                </td>
+                <td class="timetable-td"></td>
+                <td class="timetable-td"></td>
+                <td class="timetable-td valid" id="os">
+                    <a asp-controller="Note" asp-action="Index">
+                        운영체제(새빛204/안우현)
+                    </a>
+                </td>
+                <td class="timetable-td"></td>
+                <td class="timetable-td"></td>
+            </tr>
+            <tr>
+                <td class="timetable-td">6</td>
+                <td class="timetable-td"></td>
+                <td class="timetable-td valid" id="os">
+                    <a asp-controller="Note" asp-action="Index">
+                        운영체제(미지정/안우현)
+                    </a>
+                </td>
+                <td class="timetable-td valid" id="dc">
+                    <a asp-controller="Note" asp-action="Index">
+                        데이터통신(참B101/최웅철)
+                    </a>
+                </td>
+                <td class="timetable-td"></td>
+                <td class="timetable-td"></td>
+                <td class="timetable-td"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

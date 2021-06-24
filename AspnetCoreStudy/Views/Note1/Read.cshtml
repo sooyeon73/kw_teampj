@@ -1,0 +1,93 @@
+﻿@model AspnetCoreStudy.Models.Note1
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3>제목 : @Model.NoteTitle </h3>
+    </div>
+
+    <div class="panel-body" id="p">
+        <p>@Html.Raw(Model.NoteContents)</p>
+        <hr />
+
+
+        @*첨부파일*@
+        @if (Model.getFiles() != null)
+        {
+            <p>첨부파일 : @Model.getFiles().Name</p>
+            <form method="post" style="align-content:center" asp-controller="Note1" asp-action="Download">
+
+                <input type="hidden" class="form-control" asp-for="@Model.getFiles().FileNo" />
+                <button class="btn btn-primary" type="submit">
+                    다운로드
+                </button>
+            </form>
+        }
+
+        <hr />
+
+        @*댓글 표시*@
+        <div id="c">
+            <h4>댓글 목록 </h4>
+
+            @if (Model.getComments().Count() != 0)
+            {
+                var a = Model.getComments();
+                @foreach (Comment c in a)
+                {
+                    <h5>익명 @a.IndexOf(c)</h5>
+                    @c.CommentContents
+                    <hr />
+                }
+                Model.Comment1 = "";
+            }
+        </div>
+
+        @* 댓글 입력 *@
+        <div class="panel-body">
+            <form method="post" style="align-content:center" asp-controller="Note1" asp-action="Detail">
+                <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+                <textarea id="input" value="" style="min-width: 90%; display:inline" cols="40" rows="3" class="form-control" asp-for="Comment1"></textarea>
+                <input type="hidden" class="form-control" asp-for="NoteNo" />
+                <button style="display:inline;vertical-align:top; height: 60px;width:60px; " type="submit" class="btn btn-primary">입력</button>
+            </form>
+        </div>
+    </div>
+    <div class="panel-footer text-right">
+        <a class="btn btn-primary" asp-controller="Note1" asp-action="index">목록</a>
+    </div>
+</div>
+<script>
+    document.getElementById("input").value = "";
+</script>
+
+<style>
+    #p {
+        padding: 30px;
+    }
+
+    p {
+        padding-bottom: 20px;
+    }
+
+    #c {
+        padding: 10px 10px 0px 10px;
+    }
+
+    h4 {
+        font-size: 15px;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+
+    h5 {
+        font-weight: bold;
+    }
+
+    h3 {
+        font-size: 17px;
+        font-weight: bold;
+        padding: 8px;
+        margin: 0px;
+    }
+</style>
+

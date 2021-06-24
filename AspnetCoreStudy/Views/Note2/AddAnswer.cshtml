@@ -1,0 +1,86 @@
+﻿@model AspnetCoreStudy.Models.Note2
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3>제목 : @Model.NoteTitle </h3>
+        </div>
+
+        <div class="panel-body" id="p">
+            <p>@Html.Raw(Model.NoteContents)</p>
+            <hr />
+            <br />
+
+
+            @*답변 작성*@
+            @if (Model.NoteAnswer == null)
+        {
+            <h3>답변 작성 하기 </h3>
+
+            <div class="col-lg-8">
+                <form method="post" asp-controller="Note2" asp-action="AddAnswer">
+                    <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+
+                    <div class="form-group">
+                        <textarea class="form-control editor" id="editor" rows="20" asp-for="@Model.NoteAnswer" placeholder="답변 입력"></textarea>
+                        <input type="hidden" class="form-control" asp-for="@Model.NoteNo" />
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">저장</button>
+                        <a class="btn btn-default" asp-controller="Note2" asp-action="Index">취소</a>
+                    </div>
+                </form>
+
+            </div>
+
+        }
+        else
+        { <h4>답변을 완료했습니다.</h4>
+            <p>답변 작성일: @Model.NoteAnswerTimeStamp </p>
+            <p>@Html.Raw(Model.NoteAnswer)</p>
+
+        }
+
+
+
+
+        </div>
+        <div class="panel-footer text-right">
+            <a class="btn btn-primary" asp-controller="Note2" asp-action="index">목록</a>
+        </div>
+    </div>
+
+<script>
+
+</script>
+
+<style>
+    #p {
+        padding: 30px;
+    }
+
+    p {
+        padding-bottom: 20px;
+    }
+
+    #c {
+        padding: 10px 10px 0px 10px;
+    }
+
+    h4 {
+        font-size: 15px;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+
+    h5 {
+        font-weight: bold;
+    }
+
+    h3 {
+        font-size: 17px;
+        font-weight: bold;
+        padding: 8px;
+        margin: 0px;
+    }
+</style>
+

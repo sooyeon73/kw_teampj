@@ -1,0 +1,42 @@
+﻿@model AspnetCoreStudy.Models.Note1
+<div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+        <form class="form-horizontal" method="post" asp-controller="Note1" asp-action="Edit">
+            <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+            <div class="form-group" style="display:none">
+                <label>작성시간</label>
+                <input type="text" value="@Model.NoteTimeStamp" class="form-control" asp-for="NoteTimeStamp" placeholder="제목 입력" readonly />
+                <span class="text-danger" asp-validation-for="NoteTimeStamp"></span>
+            </div>
+            <div class="form-group" style="display:none">
+                <label>글번호</label>
+                <input type="text" value="@Model.NoteNo" class="form-control" asp-for="NoteNo" placeholder="제목 입력" readonly />
+                <span class="text-danger" asp-validation-for="NoteNo"></span>
+            </div>
+
+            <div class="form-group" style="display:none">
+                <label>작성자</label>
+                <input type="text" value="@Model.UserNo" class="form-control" asp-for="UserNo" placeholder="제목 입력" readonly />
+                <span class="text-danger" asp-validation-for="UserNo"></span>
+            </div>
+
+            <div class="form-group">
+                <label>제목</label>
+                <input type="text" value="@Model.NoteTitle" class="form-control" asp-for="NoteTitle" placeholder="제목 입력" />
+                <span class="text-danger" asp-validation-for="NoteTitle"></span>
+            </div>
+            <div class="form-group">
+                <textarea class="form-control editor" id="editor" rows="20" value="@Model.NoteContents" asp-for="NoteContents" placeholder="내용 입력"></textarea>
+                <span class="text-danger" asp-validation-for="NoteContents"></span>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">수정완료</button>
+                <a class="btn btn-default" asp-controller="Note1" asp-action="Index">취소</a> <!--Note의 index 페이지로 넘김-->
+            </div>
+
+        </form>
+    </div>
+
+    <div class="col-lg-2"></div>
+</div>

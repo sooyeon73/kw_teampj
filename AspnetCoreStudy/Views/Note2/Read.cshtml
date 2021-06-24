@@ -1,0 +1,62 @@
+﻿@model AspnetCoreStudy.Models.Note2
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3>제목 : @Model.NoteTitle </h3>
+        </div>
+
+        <div class="panel-body" id="p">
+
+            <p>@Html.Raw(Model.NoteContents)</p>
+            <hr />
+
+            @if( Model.NoteAnswer!=null){
+            <h4>답변</h4>
+            <p>답변 작성일: @Model.NoteAnswerTimeStamp </p>
+            <p>@Html.Raw(Model.NoteAnswer)</p>
+            <hr />
+
+        }
+        else{
+            <p>아직 답변이 작성되지 않았습니다.</p>
+        }
+
+        </div>
+
+        <div class="panel-footer text-right">
+            <a class="btn btn-primary" asp-controller="Note2" asp-action="index">목록</a>
+        </div>
+    </div>
+
+
+<style>
+    #p {
+        padding: 30px;
+    }
+
+    p {
+        padding-bottom: 20px;
+    }
+
+    #c {
+        padding: 10px 10px 0px 10px;
+    }
+
+    h4 {
+        font-size: 15px;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+
+    h5 {
+        font-weight: bold;
+    }
+
+    h3 {
+        font-size: 17px;
+        font-weight: bold;
+        padding: 8px;
+        margin: 0px;
+    }
+</style>
+

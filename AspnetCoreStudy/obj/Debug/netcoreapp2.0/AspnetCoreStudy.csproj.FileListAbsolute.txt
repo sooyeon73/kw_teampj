@@ -1,0 +1,28 @@
+C:\Users\정성인\Downloads\AspnetCoreStudy-master (1)\AspnetCoreStudy-master\AspnetCoreStudy\bin\Debug\netcoreapp2.0\AspnetCoreStudy.deps.json
+C:\Users\정성인\Downloads\AspnetCoreStudy-master (1)\AspnetCoreStudy-master\AspnetCoreStudy\bin\Debug\netcoreapp2.0\AspnetCoreStudy.runtimeconfig.json
+C:\Users\정성인\Downloads\AspnetCoreStudy-master (1)\AspnetCoreStudy-master\AspnetCoreStudy\bin\Debug\netcoreapp2.0\AspnetCoreStudy.runtimeconfig.dev.json
+C:\Users\정성인\Downloads\AspnetCoreStudy-master (1)\AspnetCoreStudy-master\AspnetCoreStudy\bin\Debug\netcoreapp2.0\AspnetCoreStudy.dll
+C:\Users\정성인\Downloads\AspnetCoreStudy-master (1)\AspnetCoreStudy-master\AspnetCoreStudy\bin\Debug\netcoreapp2.0\AspnetCoreStudy.pdb
+C:\Users\정성인\Downloads\AspnetCoreStudy-master (1)\AspnetCoreStudy-master\AspnetCoreStudy\obj\Debug\netcoreapp2.0\AspnetCoreStudy.csprojAssemblyReference.cache
+C:\Users\정성인\Downloads\AspnetCoreStudy-master (1)\AspnetCoreStudy-master\AspnetCoreStudy\obj\Debug\netcoreapp2.0\AspnetCoreStudy.csproj.CoreCompileInputs.cache
+C:\Users\정성인\Downloads\AspnetCoreStudy-master (1)\AspnetCoreStudy-master\AspnetCoreStudy\obj\Debug\netcoreapp2.0\AspnetCoreStudy.AssemblyInfoInputs.cache
+C:\Users\정성인\Downloads\AspnetCoreStudy-master (1)\AspnetCoreStudy-master\AspnetCoreStudy\obj\Debug\netcoreapp2.0\AspnetCoreStudy.AssemblyInfo.cs
+C:\Users\정성인\Downloads\AspnetCoreStudy-master (1)\AspnetCoreStudy-master\AspnetCoreStudy\obj\Debug\netcoreapp2.0\AspnetCoreStudy.dll
+C:\Users\정성인\Downloads\AspnetCoreStudy-master (1)\AspnetCoreStudy-master\AspnetCoreStudy\obj\Debug\netcoreapp2.0\AspnetCoreStudy.pdb
+C:\Users\psy\Desktop\team\AspnetCoreStudy-master\AspnetCoreStudy\bin\Debug\netcoreapp2.0\appsettings.Development.json
+C:\Users\psy\Desktop\team\AspnetCoreStudy-master\AspnetCoreStudy\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Users\psy\Desktop\team\AspnetCoreStudy-master\AspnetCoreStudy\bin\Debug\netcoreapp2.0\bower.json
+C:\Users\psy\Desktop\team\AspnetCoreStudy-master\AspnetCoreStudy\bin\Debug\netcoreapp2.0\bundleconfig.json
+C:\Users\psy\Desktop\team\AspnetCoreStudy-master\AspnetCoreStudy\bin\Debug\netcoreapp2.0\Properties\launchSettings.json
+C:\Users\psy\Desktop\team\AspnetCoreStudy-master\AspnetCoreStudy\bin\Debug\netcoreapp2.0\AspnetCoreStudy.deps.json
+C:\Users\psy\Desktop\team\AspnetCoreStudy-master\AspnetCoreStudy\bin\Debug\netcoreapp2.0\AspnetCoreStudy.runtimeconfig.json
+C:\Users\psy\Desktop\team\AspnetCoreStudy-master\AspnetCoreStudy\bin\Debug\netcoreapp2.0\AspnetCoreStudy.runtimeconfig.dev.json
+C:\Users\psy\Desktop\team\AspnetCoreStudy-master\AspnetCoreStudy\bin\Debug\netcoreapp2.0\AspnetCoreStudy.dll
+C:\Users\psy\Desktop\team\AspnetCoreStudy-master\AspnetCoreStudy\bin\Debug\netcoreapp2.0\AspnetCoreStudy.pdb
+C:\Users\psy\Desktop\team\AspnetCoreStudy-master\AspnetCoreStudy\obj\Debug\netcoreapp2.0\AspnetCoreStudy.csprojAssemblyReference.cache
+C:\Users\psy\Desktop\team\AspnetCoreStudy-master\AspnetCoreStudy\obj\Debug\netcoreapp2.0\AspnetCoreStudy.csproj.CoreCompileInputs.cache
+C:\Users\psy\Desktop\team\AspnetCoreStudy-master\AspnetCoreStudy\obj\Debug\netcoreapp2.0\AspnetCoreStudy.AssemblyInfoInputs.cache
+C:\Users\psy\Desktop\team\AspnetCoreStudy-master\AspnetCoreStudy\obj\Debug\netcoreapp2.0\AspnetCoreStudy.AssemblyInfo.cs
+C:\Users\psy\Desktop\team\AspnetCoreStudy-master\AspnetCoreStudy\obj\Debug\netcoreapp2.0\AspnetCoreStudy.dll
+C:\Users\psy\Desktop\team\AspnetCoreStudy-master\AspnetCoreStudy\obj\Debug\netcoreapp2.0\AspnetCoreStudy.pdb
+C:\Users\psy\Desktop\team\AspnetCoreStudy-master\AspnetCoreStudy\obj\Debug\netcoreapp2.0\AspnetCoreStudy.genruntimeconfig.cache

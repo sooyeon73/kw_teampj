@@ -1,0 +1,114 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2> 과제 게시판 </h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>작성자</th>
+            <th>기한</th>
+            <th>조회수</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var note in ViewBag.notes)
+        {
+            <tr>
+                <td>@note.NoteNo</td>
+                <td>
+                    @if (note.check() == true)
+                    {
+                        //기한 안지남
+
+                        @if (ViewBag.currentUser.IfStudent.Equals("교수"))
+                        {
+                            <a asp-controller="Note3" asp-action="Read" asp-route-noteNo="@note.NoteNo">
+                                @note.NoteTitle
+                            </a>
+                        }
+                        else
+                        {
+                            @if (note.getFiles() != null)
+                            {
+
+                                <a asp-controller="Note3" asp-action="Read" asp-route-noteNo="@note.NoteNo">
+                                    @note.NoteTitle
+                                </a>
+                            }
+                            else
+                            {
+
+                                <a asp-controller="Note3" asp-action="AddAnswer" asp-route-noteNo="@note.NoteNo">
+                                    @note.NoteTitle
+
+                                </a>
+                            }
+                        }
+                    }
+                    else
+                    //기한지남
+                    {
+                        @if (ViewBag.currentUser.IfStudent.Equals("교수"))
+                        {
+
+                            <a asp-controller="Note3" asp-action="Read" asp-route-noteNo="@note.NoteNo">
+                                @note.NoteTitle
+                            </a>
+                        }
+                        else
+                        {
+                    @if (note.getFiles() != null)
+                    {
+
+                        <a style="color:black" asp-controller="Note3" asp-action="Read" asp-route-noteNo="@note.NoteNo">
+                            @note.NoteTitle
+                        </a>
+                    }
+                    else
+                    {
+
+                        <aa asp-controller="Note3" asp-action="AddAnswer" asp-route-noteNo="@note.NoteNo">
+                            @note.NoteTitle
+
+                        </aa>
+                    }
+                        }
+
+                    }
+
+                </td>
+                @{ string username = "";}
+                @foreach(var user in ViewBag.users)
+                {
+                    if (user.UserNo.Equals(note.UserNo)) {
+                        Console.WriteLine(note.UserNo);
+                        username = user.UserName;
+                        break; }
+                }
+                <td>@username</td>
+
+                
+
+                <td><strong>@note.getDeadLine()</strong></td>
+                <td>@note.ReadNum</td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+<style>
+    aa {
+    color:grey;
+    }
+ 
+</style>
+
+@if(ViewBag.currentUser.IfStudent.Equals("교수"))
+{
+    <a class="btn btn-warning" asp-controller="Note3" asp-action="Add">과제 작성</a>
+
+}

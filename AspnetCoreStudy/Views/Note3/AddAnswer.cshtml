@@ -1,0 +1,75 @@
+﻿@model AspnetCoreStudy.Models.Note3
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3>제목 : @Model.NoteTitle </h3>
+        </div>
+
+        <div class="panel-body" id="p">
+            <p>@Html.Raw(Model.NoteContents)</p>
+
+
+
+            <h4> 기한  : @Model.getDeadLine()</h4>
+            <hr />
+
+            <h3>과제 제출 하기 </h3>
+                <br /> 
+                    <form style="margin:10px" method="post" asp-controller="Note3" asp-action="Add_" enctype="multipart/form-data">
+                        <div class="form-group">
+
+                            <label>파일 첨부</label><br />
+                            <input style="display:inline" id="1" name="files" type="file" />
+                            <input type="hidden" class="form-control" asp-for="NoteNo" />
+
+                            <button type="submit" class="btn btn-primary">저장</button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+                <div class="panel-footer text-right">
+                    <a class="btn btn-primary" asp-controller="Note3" asp-action="index">목록</a>
+                </div>
+            </div>
+
+<script>
+
+</script>
+
+<style>
+    #p {
+        padding: 30px;
+    }
+
+    p {
+        padding-bottom: 20px;
+    }
+
+    #c {
+        padding: 10px 10px 0px 10px;
+    }
+
+    h4 {
+        font-size: 15px;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+
+    h5 {
+        font-weight: bold;
+    }
+
+    h3 {
+        font-size: 17px;
+        font-weight: bold;
+        padding: 8px;
+        margin: 0px;
+    }
+</style>
+
+<script>
+    int a = Date.parse(@Model.DeadLine);
+
+</script>

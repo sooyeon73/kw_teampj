@@ -1,0 +1,71 @@
+﻿@model AspnetCoreStudy.Models.Note3
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3>제목 : @Model.NoteTitle </h3>
+        </div>
+
+        <div class="panel-body" id="p">
+
+            <p>@Html.Raw(Model.NoteContents)</p>
+
+
+            <h4> 기한  : @Model.getDeadLine()</h4>
+            <hr />
+
+            @*첨부파일*@
+            @if (Model.getFiles() != null)
+            {
+                <h4> 제출이 완료되었습니다. </h4>
+                <br />
+                <p>첨부파일 : @Model.getFiles().Name</p>
+                <form method="post" style="align-content:center" asp-controller="Note" asp-action="Download">
+
+                    <input type="hidden" class="form-control" asp-for="@Model.getFiles().FileNo" />
+                    <button class="btn btn-primary" type="submit">
+                        다운로드
+                    </button>
+                </form>
+
+                <p>@Model.AssignmentContents</p>
+            }
+
+        </div>
+
+        <div class="panel-footer text-right">
+            <a class="btn btn-primary" asp-controller="Note3" asp-action="index">목록</a>
+        </div>
+    </div>
+
+
+<style>
+    #p {
+        padding: 30px;
+    }
+
+    p {
+        padding-bottom: 20px;
+    }
+
+    #c {
+        padding: 10px 10px 0px 10px;
+    }
+
+    h4 {
+        font-size: 15px;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+
+    h5 {
+        font-weight: bold;
+    }
+
+    h3 {
+        font-size: 17px;
+        font-weight: bold;
+        padding: 8px;
+        margin: 0px;
+    }
+</style>
+
